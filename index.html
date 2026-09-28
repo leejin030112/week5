@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LET’S MAKE A PANTONE T-SHIRT!</title>
+
+
+  <style>
+
+    @font-face {
+
+      font-family: "Futura";
+      src: url("Futura Bold Oblique.otf") format("opentype");
+
+    }
+
+
+
+    body {
+
+      background: #006261;
+      margin: 20px;
+      font-family: "Futura", sans-serif;
+
+    }
+
+
+    .header {
+      display: flex;
+      align-items: flex-start;
+      margin: 0px;
+
+    }
+
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      color: white;
+
+    }
+
+
+
+    .catalog {
+      display: flex;
+      gap: 15px;
+      margin-left: 250px;
+      padding-top: 40px;
+
+    }
+
+
+    .catalog-item {
+      color: white;
+      font-size: 11px;
+      cursor: pointer;
+
+    }
+
+
+    .catalog-item:hover {
+      text-decoration: underline;
+    }
+
+
+
+    .info {
+      position: absolute;
+      top: 120px;
+      left: 900px;
+      width: 400px;
+      color: white;
+      font-size: 10px;
+      line-height: 1.4;
+      display: none;
+
+    }
+
+
+    .info.show {
+      display: block;
+
+    }
+
+
+    .info-title {
+      font-size: 13px;
+      margin-bottom: 5px;
+
+    }
+
+
+
+    .item {
+
+      display: flex;
+      align-items: flex-start;
+      gap: 300px;
+      margin-left: 30px;
+      margin-top: 80px;
+
+    }
+
+
+
+    .tshirtbox {
+
+      width: 550px;
+      height: 550px;
+      background: #006261;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+    }
+
+
+    .tshirt {
+      width: 600px;
+    }
+
+
+   
+    .colorcode {
+      position: absolute;
+      font-size: 17px;
+      left: 330px;
+      top: 170px;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      color: #006261;
+
+    }
+
+
+    .mytext {
+      width: 250px;
+      position: absolute;
+      font-size: 46px;
+      left: 280px;
+      top: 290px;
+      transform: translate(-50%, -50%);
+      color: #006261;
+      pointer-events: none;
+      text-align: Left;
+      overflow-wrap: break-word;
+
+
+    }
+
+
+    .control {
+      width: 400px;
+      margin-top: 50px;
+    }
+
+
+    .control p {
+      margin: 9px 0 4px 0;
+      font-size: 13px;
+      color: white;
+
+    }
+
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: yellow;
+
+    }
+
+
+    input[type="color"] {
+      width: 100%;
+      height: 35px;
+
+    }
+
+
+    input[type="text"] {
+      width: 100%;
+      height: 35px;
+      box-sizing: border-box;
+    }
+
+    footer {
+  margin: 50px 30px 20px 30px;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div class="header">
+
+
+    <h1>LET’S MAKE A PANTONE T-SHIRT!</h1>
+
+
+    <div class="catalog">
+
+
+      <div
+        class="catalog-item"
+        onclick="openInfo('about')">
+
+        ABOUT
+
+      </div>
+
+
+      <div
+        class="catalog-item"
+        onclick="openInfo('pantone')">
+
+        PANTONE
+
+      </div>
+
+
+      <div
+        class="catalog-item"
+        onclick="openInfo('make')">
+
+        JUST MAKE!
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <div
+    class="info"
+    id="about">
+
+    <div class="info-title">
+      ABOUT
+    </div>
+
+    This website is a fictional PANTONE T-shirt mockup site created based on what I learned in UX Media Studio (AI).
+
+  </div>
+
+  <div
+    class="info"
+    id="pantone">
+
+    <div class="info-title">
+      PANTONE
+    </div>
+
+    PANTONE refers to a U.S.-based color company and the standardized color system it developed to systematically classify and standardize thousands of colors worldwide.
+
+  </div>
+
+
+  <div
+    class="info"
+    id="make">
+
+    <div class="info-title">
+      JUST MAKE!
+    </div>
+
+    Explore the code of your chosen color, add your own text, and create your very own PANTONE T-shirt mockup. It’s completely free!
+
+  </div>
+
+
+  <div class="item">
+
+
+    <div
+      class="tshirtbox"
+      id="box1">
+
+
+      <img
+        src="tshirt.png"
+        class="tshirt">
+
+
+      <div
+        class="colorcode"
+        id="code1">
+
+        #JJ0112
+
+      </div>
+
+
+      <div
+        class="mytext"
+        id="text1">
+
+        Hello! <br>I'm T-Shirt
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <div class="control">
+
+      <p>TEXT</p>
+
+      <input
+        type="text"
+        id="textinput"
+        placeholder="write something">
+
+
+      <p>COLOR</p>
+
+      <input
+        type="color"
+        id="color1"
+        value="#006261">
+
+
+      <p>BACKGROUND</p>
+
+      <input
+        type="color"
+        id="back1"
+        value="#006261">
+
+
+      <p>TEXT X</p>
+
+      <input
+        type="range"
+        id="x1"
+        min="0"
+        max="550"
+        value="200">
+
+
+      <p>TEXT Y</p>
+
+      <input
+        type="range"
+        id="y1"
+        min="0"
+        max="550"
+        value="195">
+
+
+      <p>TEXT SIZE</p>
+
+      <input
+        type="range"
+        id="size1"
+        min="10"
+        max="80"
+        value="33">
+
+      <p>COLOR CODE X</p>
+
+      <input
+        type="range"
+        id="codex"
+        min="0"
+        max="550"
+        value="235">
+
+
+      <p>COLOR CODE Y</p>
+
+      <input
+        type="range"
+        id="codey"
+        min="0"
+        max="550"
+        value="120">
+
+
+      <p>COLOR CODE SIZE</p>
+
+      <input
+        type="range"
+        id="codesize"
+        min="10"
+        max="80"
+        value="17">
+
+
+    </div>
+
+
+  </div>
+
+  <footer
+  >
+  © 2026 JIN LEE
+PANTONE T-SHIRT — PERSONAL PROJECT
+</footer>
+
+
+
+  <script>
+
+
+    function openInfo(name) {
+
+
+      document
+        .getElementById("about")
+        .classList.remove("show");
+
+
+      document
+        .getElementById("pantone")
+        .classList.remove("show");
+
+
+      document
+        .getElementById("make")
+        .classList.remove("show");
+
+
+      document
+        .getElementById(name)
+        .classList.add("show");
+
+
+    }
+
+
+
+    textinput.oninput = function() {
+
+      text1.innerHTML = textinput.value;
+
+    }
+
+
+
+    color1.oninput = function() {
+
+      code1.innerHTML = color1.value;
+      code1.style.color = color1.value;
+      text1.style.color = color1.value;
+
+    }
+
+
+    back1.oninput = function() {
+
+      box1.style.background = back1.value;
+
+    }
+
+
+
+    x1.oninput = function() {
+
+      text1.style.left = x1.value + "px";
+
+    }
+
+
+
+
+    y1.oninput = function() {
+
+      text1.style.top = y1.value + "px";
+
+    }
+
+
+    size1.oninput = function() {
+
+      text1.style.fontSize = size1.value + "px";
+
+    }
+
+
+    codex.oninput = function() {
+
+      code1.style.left = codex.value + "px";
+
+    }
+
+
+
+    codey.oninput = function() {
+
+      code1.style.top = codey.value + "px";
+
+    }
+
+
+    codesize.oninput = function() {
+
+      code1.style.fontSize = codesize.value + "px";
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
